@@ -1,0 +1,90 @@
+body {
+	padding-top: 60px;
+}
+
+.row_space {
+    padding: 20px 0;
+}
+
+.row_space_top {
+    padding-top: 20px;
+}
+
+.row_space {
+    padding: 20px 0;
+}
+
+.circle{
+    width:15px;
+    height:15px;
+    border-radius:50px;
+    font-size:20px;
+    color:#ffffff;
+    line-height:10px;
+    text-align:center;
+}
+.info{
+    position:absolute;
+    color:#000000;
+    margin-left:20px;
+}
+
+.panel-heading a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: grey;
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+
+#calendar {
+	margin: 0 auto;
+}
+.fc-agendaWeek-view tr {
+	height: 35px;
+}
+
+.fc-agendaDay-view tr {
+	height: 35px;
+}
+
+.colorpicker-2x .colorpicker-saturation {
+	width: 200px;
+	height: 200px;
+}
+.colorpicker-2x .colorpicker-hue,
+.colorpicker-2x .colorpicker-alpha {
+	width: 30px;
+	height: 200px;
+}
+.colorpicker-2x .colorpicker-color,
+.colorpicker-2x .colorpicker-color div{
+	height: 30px;
+}
+
+.legend { display: inline-block; list-style: none; justify-content: center; text-align:center;}
+.legend li { float: left; margin-right: 30px; }
+.legend span { float: left; width: 15px; height: 15px; margin: 2px; border-radius: 50%; }
+
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event {
+    color: #583939;
+}
+
+.fc-title{
+	text-align:center;
+}
+
+.kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+.kv-avatar .file-input {
+    display: table-cell;
+    max-width: 220px;
+}
