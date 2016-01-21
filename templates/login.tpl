@@ -14,7 +14,7 @@
   <div class="col-sm-6 col-md-4 col-md-offset-4">
     <h1 class="text-center login-title">Authentification</h1>
     <div class="form-group text-center">
-        <img class="profile-img" src="/media/img.jpg" width="80%" alt="img">
+        <img class="profile-img" src="/media/img.png" width="80%" alt="img">
     </div>
     <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
       {% csrf_token %}

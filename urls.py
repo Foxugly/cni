@@ -32,6 +32,7 @@ def custom_505(request):
 urlpatterns = [
     url(r'^$', login_required(dashboard), name='home'),
     url(r'^user/', include('users.urls'), name='users'),
+    url(r'^document/', include('document.urls'), name='document'),
     url(r'^admin/', include(admin.site.urls)),
 ] + patterns('', (r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}), )\
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

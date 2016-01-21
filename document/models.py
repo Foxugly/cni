@@ -55,20 +55,26 @@ class PointForm(ModelForm):
 
 class OrderOfBusiness(models.Model):
     name = models.CharField(verbose_name=_(u'Name'), max_length=255, default=_(u'Order of Business'))
-    meeting_datetime = models.DateTimeField(verbose_name=_(u'Date of the meeting'), blank=False)
+    meeting_date = models.DateField(verbose_name=_(u'Date of the meeting'), blank=False)
+    meeting_time = models.TimeField(verbose_name=_(u'Time of the meeting'), blank=False)
     timezone = TimeZoneField(default=settings.TIME_ZONE)
     address = AddressField()
     date_creation = models.DateField(verbose_name=_(u'Creation date'), auto_now_add=True)
     subjects = models.ManyToManyField(Subject, verbose_name=_(u'Subjects'), blank=True)
 
     def __str__(self):
-        return u"%s %s" % (self.name, self.meeting_datetime)
+        return u"(%d) %s %s" % (self.id, self.name, self.meeting_date)
 
 
 class OrderOfBusinessForm(ModelForm):
     class Meta:
         model = OrderOfBusiness
-        fields = ['name', 'meeting_datetime', 'address']
+        fields = ['name', 'meeting_date', 'meeting_time', 'address']
+
+    def __init__(self, *args, **kwargs):
+        super(OrderOfBusinessForm, self).__init__(*args, **kwargs)
+        self.fields['meeting_date'].widget.attrs['class'] = 'datepicker'
+        self.fields['meeting_time'].widget.attrs['class'] = 'clockpicker'
 
 
 class Report(models.Model):

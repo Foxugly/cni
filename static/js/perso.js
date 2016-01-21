@@ -89,6 +89,10 @@ $(document).ready(function() {
         language: "{{user.userprofile.language}}"
     });
 
+    /*$('.datetimepicker').datetimepicker({
+        locale: "{{user.userprofile.language}}"
+    });*/
+
     $('.select2').select2();
 
     $('.select2-nosearch').select2({minimumResultsForSearch: -1});
